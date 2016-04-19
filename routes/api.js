@@ -16,22 +16,22 @@ router.get('/forecast', function(req, res) {
 	if (forecast) {
 		res.set('Content-Type', 'application/json');
     res.send(body);
-	}
+	} else {
+	  request(forecastUrl, function (error, response, body) {
+	    if (!error && response.statusCode == 200) {
+	    	cache.set(forecastUrl, body, cacheTime);
 
-  request(forecastUrl, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-    	cache.set(forecastUrl, body, cacheTime);
-    	
-    	res.set('Content-Type', 'application/json');
-      res.send(body);
-    } else {
-    	res.status(response.statusCode);
-    	res.json({
-    		error: true,
-    		message: body
-    	})
-    }
-  })
+	    	res.set('Content-Type', 'application/json');
+	      res.send(body);
+	    } else {
+	    	res.status(response.statusCode);
+	    	res.json({
+	    		error: true,
+	    		message: body
+	    	});
+	    }
+	  });
+	}
 });
 
 module.exports = router;

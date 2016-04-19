@@ -5,3 +5,12 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+@mixin hero-box($font-size: 30px) {
+	background: $color-main-dark;
+	color: $color-main-light;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: $font-size;
+	padding: 20px;
+}

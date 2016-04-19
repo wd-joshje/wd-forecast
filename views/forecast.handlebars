@@ -1,5 +1,11 @@
-<div class="hero hero-halfheight">
-	<div class="hero_inner">
-	Forecast
+<div class="forecast">
+	{{#today}}
+	<div class="forecast_today">
+		<div class="forecast_inner">
+			<p>Today&rsquo;s weather is <span class="forecast_main">{{weather.0.main}}</span></p>
+
+			{{> partials/weather-details}}
+		</div>
 	</div>
+	{{/today}}
 </div>

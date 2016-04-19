@@ -1,0 +1,30 @@
+.forecast {
+	height: 100%;
+
+	p {
+		margin: 0;
+	}
+
+	&_today {
+		@include hero-box(20px);
+		height: 50%;
+	}
+
+	&_inner {
+		@include vertical-align();
+	}
+
+	&_main {
+		font-size: 1.5em;
+		display: block;
+		padding: 0.25em 0;
+	}
+
+	&_detais {
+		font-size: 0.75em;
+	}
+
+	&_temp {
+		font-size: 1.5em;
+	}
+}

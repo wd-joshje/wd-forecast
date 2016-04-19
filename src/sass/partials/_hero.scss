@@ -1,10 +1,5 @@
 .hero {
-	background: $color-main-dark;
-	color: $color-main-light;
-	box-sizing: border-box;
-	text-align: center;
-	font-size: 30px;
-	padding: 20px;
+	@include hero-box();
 
 	&-fullheight {
 		height: 100%;

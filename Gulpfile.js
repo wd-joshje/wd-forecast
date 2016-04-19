@@ -23,7 +23,10 @@ gulp.task('js', function() {
     },
     module: {
       loaders: [
-        { test: /\.handlebars$/, loader: 'handlebars-loader' }
+        {
+          test: /\.handlebars$/,
+          loader: 'handlebars-loader?helperDirs[]=' + __dirname + '/views/helpers'
+        }
       ]
     }
   }))
