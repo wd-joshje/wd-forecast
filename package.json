@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
+    "fast-memory-cache": "^2.0.4",
     "gator": "^1.2.4",
     "geolocation": "^0.2.0",
     "gulp": "^3.9.0",

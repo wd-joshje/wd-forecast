@@ -2,14 +2,19 @@
 	background: $color-main-dark;
 	color: $color-main-light;
 	box-sizing: border-box;
-	padding: 1em;
 	text-align: center;
+	font-size: 30px;
+	padding: 20px;
 
 	&-fullheight {
 		height: 100%;
 	}
-	
+
 	&-halfheight {
 		height: 50%;
+	}
+
+	&_inner {
+		@include vertical-align();
 	}
 }
