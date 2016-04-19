@@ -1,0 +1,15 @@
+.hero {
+	background: $color-main-dark;
+	color: $color-main-light;
+	box-sizing: border-box;
+	padding: 1em;
+	text-align: center;
+
+	&-fullheight {
+		height: 100%;
+	}
+	
+	&-halfheight {
+		height: 50%;
+	}
+}
