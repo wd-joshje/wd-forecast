@@ -9,6 +9,7 @@ var cacheTime = 60; // 1 minute
 router.get('/forecast', function(req, res) {
 	var forecastUrl = 'http://api.openweathermap.org/data/2.5/forecast';
 	forecastUrl += '?lat=' + req.query.lat + '&lon=' + req.query.lon;
+	forecastUrl += '&units=' + (req.query.units || 'metric');
 	forecastUrl += '&APPID=0a242f2b18dfdabe8ec974dfa3cd7850';
 
 	var forecast = cache.get('forecastUrl');

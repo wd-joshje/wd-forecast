@@ -14,9 +14,9 @@ function onError(err) {
 }
 
 function getForecast(position) {
-	var lat = position.coords.latitude;
-	var lon = position.coords.longitude;
-	var weatherUrl = '/api/forecast?lat=' + lat + '&lon=' + lon + '&units=metric';
+	var lat = position.coords.latitude.toFixed(3);
+	var lon = position.coords.longitude.toFixed(3);
+	var weatherUrl = '/api/forecast?lat=' + lat + '&lon=' + lon;
 
 	$.ajax({
 		url: weatherUrl
