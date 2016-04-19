@@ -1,0 +1,29 @@
+{
+  "name": "wd-forecast",
+  "description": "5 day forecasts",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node node_modules/gulp/bin/gulp build && node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "gator": "^1.2.4",
+    "geolocation": "^0.2.0",
+    "gulp": "^3.9.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.1.1",
+    "handlebars": "^4.0.5",
+    "handlebars-loader": "^1.1.4",
+    "http-proxy": "^1.13.2",
+    "jquery": "^2.2.3",
+    "lodash": "^4.6.1",
+    "request": "^2.72.0",
+    "webpack-stream": "^3.1.0"
+  }
+}
