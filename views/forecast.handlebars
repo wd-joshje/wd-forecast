@@ -1,11 +1,16 @@
 <div class="forecast">
-	{{#today}}
-	<div class="forecast_today">
-		<div class="forecast_inner">
-			<p>Today&rsquo;s weather is <span class="forecast_main">{{weather.0.main}}</span></p>
+	{{#each forecast}}
+		<div class="forecast_item">
+			<div class="forecast_inner">
+				<span class="forecast_date">{{format-date dt}}</span>
 
-			{{> partials/weather-details}}
+				<span class="forecast_result">
+					<span class="forecast_main">{{weather.0.main}}</span>
+
+					{{> partials/weather-details}}
+				</span>
+			</div>
 		</div>
-	</div>
-	{{/today}}
+	{{/each}}
+
 </div>

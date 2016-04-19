@@ -2,12 +2,7 @@ var $ = require('jquery');
 var stateManager = require('./state-manager');
 
 function onForecast(forecast) {
-	console.log('forecast', forecast);
-
-	var today = forecast.list.shift();
-
 	stateManager.renderState('forecast', {
-		today: today,
 		forecast: forecast.list
 	});
 };

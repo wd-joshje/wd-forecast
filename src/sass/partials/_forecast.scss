@@ -5,26 +5,61 @@
 		margin: 0;
 	}
 
-	&_today {
-		@include hero-box(20px);
-		height: 50%;
+	&_item {
+		@include hero-box(16px);
+		height: 20%;
+		overflow: hidden;
+
+		&:nth-child(even) {
+			background-color: $color-main-darker;
+		}
+
+		@media all and (min-width: 400px) {
+			font-size: 20px;
+		}
+
+		@media all and (min-width: 600px) {
+			font-size: 22px;
+			height: 33%;
+		}
 	}
 
 	&_inner {
 		@include vertical-align();
+		overflow: hidden;
 	}
 
 	&_main {
-		font-size: 1.5em;
+		font-size: 1.75em;
 		display: block;
 		padding: 0.25em 0;
 	}
 
-	&_detais {
+	&_details {
 		font-size: 0.75em;
 	}
 
 	&_temp {
 		font-size: 1.5em;
+	}
+
+	@media all and (min-width: 600px) {
+		&_date {
+			display: block;
+			width: 50%;
+			float: left;
+			text-align: right;
+			padding-right: 1em;
+			box-sizing: border-box;
+		}
+		&_result {
+			display: block;
+			text-align: left;
+			width: 50%;
+			float: left;
+		}
+		&_main {
+			padding-top: 0;
+		}
 	}
 }

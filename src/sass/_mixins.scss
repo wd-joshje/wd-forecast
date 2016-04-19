@@ -6,9 +6,9 @@
   transform: translateY(-50%);
 }
 
-@mixin hero-box($font-size: 30px) {
-	background: $color-main-dark;
-	color: $color-main-light;
+@mixin hero-box($font-size: 30px, $background: $color-main-dark, $color: $color-main-light) {
+	background: $background;
+	color: $color;
 	box-sizing: border-box;
 	text-align: center;
 	font-size: $font-size;
