@@ -6,6 +6,10 @@
   "scripts": {
     "start": "node node_modules/gulp/bin/gulp build && node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wd-joshje/wd-forecast.git"
+   },
   "author": "",
   "license": "ISC",
   "dependencies": {
